@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block app_content %}
+<div class="container">
+    <h3>Stocks Viewer</h3>
+    <div class="row">
+        <div class="'col-md-4">
+            {{ wtf.quick_form(find_stock_form) }}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'bootstrap/base.html' %}
+{% block content %}
+{% block app_content %}{% endblock %}
+<footer id="footer">
+    {% block footer%}
+    <!-- Copyright -->
+    <div class="text-center p-3">
+      <p class="footer-block">
+      © 2023 Copyright <a class="mfooter-logo" href="/" title="Stocks">
+        <img src="{{ url_for('static', filename='icons8-stocks-100.png') }}" height="30em" width="30em" alt="Logo">
+      </a>  <br/>Gleb Khvoles
+      </p>
+    </div>
+    <!-- Copyright -->
+    {% endblock %}
+  </footer>
+  {% endblock %}
