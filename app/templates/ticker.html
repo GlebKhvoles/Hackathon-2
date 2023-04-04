@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block app_content %}
+<div class="container">
+    <h3>Ticker Viewer  
+        <a href="{{url_for('stocks.get_stocks')}}">
+            <button type="button" class="btn btn-outline-secondary">Home</button>
+        </a>
+    </h3>
+    
+    {% if ticker_data %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Ticker</th>
+                <th>Price</th>
+                <th>Date</th>
+            </tr>
+        <thead>
+        <tbody>
+            {% for data in ticker_data %}    
+                <tr>
+                    <td>{{data.ticker}}</td>
+                    <td>{{data.price}}</td>
+                    <td>{{data.date}}</td>
+                </tr>
+            {% endfor %}
+        </tbody> 
+    </table>
+    {% endif %}
+</div>
+{% endblock %}

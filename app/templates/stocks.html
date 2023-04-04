@@ -8,5 +8,13 @@
             {{ wtf.quick_form(find_stock_form) }}
         </div>
     </div>
+    <br/>
+    {% if stocks %}
+    <div class="row">
+        {% for stock in stocks %}
+        <p>{{stock.ticker}} <a href="ticker/{{stock.ticker}}">View data</a></p>
+        {% endfor %}
+    </div> 
+    {% endif %}
 </div>
 {% endblock %}
